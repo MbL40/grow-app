@@ -1,0 +1,43 @@
+<ion-content class="ion-padding">
+  <form [formGroup]="loginForm" class="ion-center-items ion-flex-column">
+    <ion-img src="../../../assets/images/logo.png"></ion-img>
+    <h2 class="ion-margin-bottom">Inicia sesión</h2>
+    <ion-input
+      formControlName="email"
+      type="text"
+      fill="outline"
+      labelPlacement="floating"
+      label="Nombre de usuario"
+      class="ion-margin-bottom"
+    />
+    <ion-input
+      formControlName="password"
+      type="text"
+      fill="outline"
+      labelPlacement="floating"
+      label="Contraseña"
+      class="ion-margin-bottom"
+    />
+    <ion-button
+      block
+      color="primary"
+      type="submit"
+      [disabled]="loginForm.invalid"
+    >
+      Login
+    </ion-button>
+    <hr style="color: #fff" />
+    <ion-button
+      class="ion-padding"
+      color="dark-contrast"
+      style="color: #00b26b"
+    >
+      <ion-icon md="logo-google" class="ion-margin-horizontal"></ion-icon>
+      Log in with Google
+    </ion-button>
+
+    <ion-text color="primary">
+      <h6><a>¿No tienes una cuenta? Regístrate</a></h6>
+    </ion-text>
+  </form>
+</ion-content>
